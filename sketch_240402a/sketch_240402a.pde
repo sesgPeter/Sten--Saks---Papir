@@ -40,5 +40,15 @@ void mousePressed(){
    }
  }
 
+ if (mouseX >= rX && mouseX <= rX+rB){
+   if (mouseY >= rY && mouseY <= rY+rH){
+ background (200)  ;
+   }
+ }
+  if (mouseX >= PX && mouseX <= PX+PB){
+   if (mouseY >= PY && mouseY <= PY+PH){
+ background (200)  ;
+   }
+ }
 
 }
