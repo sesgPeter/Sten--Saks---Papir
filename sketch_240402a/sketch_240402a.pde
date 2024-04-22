@@ -1,15 +1,23 @@
 Button myButton;
+Papir myPapir;
+Sten mySten;
 
-Button b1, b2, b3;
+PImage img; 
 
 void setup() {
   size(500, 500);
   background(100);
-  myButton = new Button(200, 200, 50, 50);
+  myButton = new Button(50, 400, 50, 50);
+  myPapir = new Papir(225, 400, 50, 50);
+  mySten = new Sten(400, 400, 50, 50);
+  img = loadImage("Paper.png") ;
+
 }
 
 void draw () {
   myButton.render();
+  myPapir.render();
+  mySten.render();
 }
 
 void mousePressed() {
