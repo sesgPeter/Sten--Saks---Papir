@@ -20,7 +20,7 @@ void setup() {
   mysaksp2 = new saksp2((width/9)*7-15, 550, 30, 25);
   mypapirp2 = new papirp2((width/9)*8-15, 550, 30, 25);
   mystenp2 = new stenp2((width/9)*6-15, 550, 30, 25);
-  mystart = new start(width/2-25,height/2,50,25);
+  mystart = new start(width/2-25,height/2,70,25);
  
  
   paper = loadImage("Paper.png");
