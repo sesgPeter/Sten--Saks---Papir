@@ -1,9 +1,10 @@
-class Button{
-//Attr
+
+class stenp2 {
+   //Attr
   float x, y, w, h;
   color c;
   //Construct
-  Button(float _x, float _y, float _w, float _h){
+  stenp2(float _x, float _y, float _w, float _h){
     x = _x;
     y = _y;
     w = _w;
@@ -18,9 +19,7 @@ class Button{
     rect(x, y, w, h);
   }
   
- 
-  
-  
+    
   boolean click(float mousex, float mousey){
     if (this.x < mousex && this.x + this.w > mousex){
       if (this.y < mousey && this.y + this.h > mousey){
@@ -34,22 +33,29 @@ class Button{
     
   return false;
   }
-  void click(){
-   image(scissors,-250,50);
-   p1=2;
-  }
+void click(){
+   image(stone,50,50);  
+   p2=1;
+} 
 }
 
-class Papir{
-//Attr
-  float xp, yp, wp, hp;
+
+
+
+
+
+
+
+class saksp2 {
+   //Attr
+  float x, y, w, h;
   color c;
   //Construct
-  Papir(float _xp, float _yp, float _wp, float _hp){
-    xp = _xp;
-    yp = _yp;
-    wp = _wp;
-    hp = _hp;
+  saksp2(float _x, float _y, float _w, float _h){
+    x = _x;
+    y = _y;
+    w = _w;
+    h = _h;
     
     c = color(0,0,150);
     
@@ -57,14 +63,13 @@ class Papir{
   //methods
   void render(){
     fill(c);
-    rect(xp, yp, wp, hp);
+    rect(x, y, w, h);
   }
   
- 
-  
+    
   boolean click(float mousex, float mousey){
-    if (this.xp < mousex && this.xp + this.wp > mousex){
-      if (this.yp < mousey && this.yp + this.hp > mousey){
+    if (this.x < mousex && this.x + this.w > mousex){
+      if (this.y < mousey && this.y + this.h > mousey){
         return true;
     }
     }
@@ -75,23 +80,28 @@ class Papir{
     
   return false;
   }
-  void click(){
-   image(paper,50,50);
-   p1=3;
-  }
+void click(){
+   image(scissors,50,50);  
+   p2=2;
+} 
 }
 
 
-class Sten{
-//Attr
-  float xr, yr, wr, hr;
+
+
+
+
+
+class papirp2 {
+   //Attr
+  float x, y, w, h;
   color c;
   //Construct
-    Sten(float _xr, float _yr, float _wr, float _hr){
-    xr = _xr;
-    yr = _yr;
-    wr = _wr;
-    hr = _hr;
+  papirp2(float _x, float _y, float _w, float _h){
+    x = _x;
+    y = _y;
+    w = _w;
+    h = _h;
     
     c = color(0,0,150);
     
@@ -99,15 +109,13 @@ class Sten{
   //methods
   void render(){
     fill(c);
-    rect(xr, yr, wr, hr);
+    rect(x, y, w, h);
   }
   
-  
-  
-  
+    
   boolean click(float mousex, float mousey){
-    if (this.xr < mousex && this.xr + this.wr > mousex){
-      if (this.yr < mousey && this.yr + this.hr > mousey){
+    if (this.x < mousex && this.x + this.w > mousex){
+      if (this.y < mousey && this.y + this.h > mousey){
         return true;
     }
     }
@@ -118,9 +126,8 @@ class Sten{
     
   return false;
   }
-  void click(){
-   image(stone,50,50);
-   p1=1;
-   
-  }
+void click(){
+   image(paper,-300,50);  
+   p2=3;
+} 
 }
