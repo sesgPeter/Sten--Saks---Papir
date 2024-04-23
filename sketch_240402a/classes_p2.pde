@@ -27,15 +27,16 @@ class stenp2 {
     }
     }
     if (true){
-      c = color(255,0,0);
+     
     }
     
     
   return false;
   }
 void click(){
-   image(stone,50,50);  
+   //image(stone,50,50);  
    p2=1;
+   start=0;
 } 
 }
 
@@ -74,15 +75,16 @@ class saksp2 {
     }
     }
     if (true){
-      c = color(255,0,0);
+      
     }
     
     
   return false;
   }
 void click(){
-   image(scissors,50,50);  
+   //image(scissors,50,50);  
    p2=2;
+   start=0;
 } 
 }
 
@@ -120,14 +122,15 @@ class papirp2 {
     }
     }
     if (true){
-      c = color(255,0,0);
+     
     }
     
     
   return false;
   }
 void click(){
-   image(paper,-300,50);  
+   //image(paper,-300,50);  
    p2=3;
+   start=0;
 } 
 }
