@@ -28,15 +28,16 @@ class Button{
     }
     }
     if (true){
-      c = color(255,0,0);
+      
     }
     
     
   return false;
   }
   void click(){
-   image(scissors,-250,50);
+   //image(scissors,-250,50);
    p1=2;
+   start=0;
   }
 }
 
@@ -69,15 +70,16 @@ class Papir{
     }
     }
     if (true){
-      c = color(255,0,0);
+      
     }
     
     
   return false;
   }
   void click(){
-   image(paper,50,50);
+   //image(paper,50,50);
    p1=3;
+   start=0;
   }
 }
 
@@ -112,15 +114,15 @@ class Sten{
     }
     }
     if (true){
-      c = color(255,0,0);
+      
     }
     
     
   return false;
   }
   void click(){
-   image(stone,50,50);
+   //image(stone,50,50);
    p1=1;
-   
+   start=0;
   }
 }
