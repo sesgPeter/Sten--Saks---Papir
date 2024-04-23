@@ -1,9 +1,12 @@
+float p1,p2;
+
 Button myButton;
 Papir myPapir;
 Sten mySten;
 stenp2 mystenp2;
 saksp2 mysaksp2;
 papirp2 mypapirp2;
+
 PImage stone, paper, scissors; 
 
 void setup() {
@@ -20,6 +23,8 @@ void setup() {
   paper = loadImage("Paper.png");
   stone = loadImage("Stone.png");
   scissors = loadImage ("Scissors.png");
+  
+  textSize(128);
 
 }
 
@@ -32,6 +37,15 @@ void draw () {
   mypapirp2.render();
   mystenp2.render();
   
+  if(p1==1 && p2==2 || p1==2 && p2==3 || p1==3 && p2==1){
+   text("p1 win",50,300); 
+  }
+  
+  if(p2==1 && p1==2 || p2==2 && p1==3 || p2==3 && p1==1){
+   text("p2 win",50,300); 
+  }
+  
+  
 }
 
 void mousePressed() {
@@ -42,6 +56,7 @@ void mousePressed() {
   }
   if (mySten.click(mouseX, mouseY)) {
       mySten.click();
+      
   }
    if (myPapir.click(mouseX, mouseY)) {
       myPapir.click();

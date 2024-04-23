@@ -35,6 +35,7 @@ class stenp2 {
   }
 void click(){
    image(stone,50,50);  
+   p2=1;
 } 
 }
 
@@ -81,6 +82,7 @@ class saksp2 {
   }
 void click(){
    image(scissors,50,50);  
+   p2=2;
 } 
 }
 
@@ -126,5 +128,6 @@ class papirp2 {
   }
 void click(){
    image(paper,-300,50);  
+   p2=3;
 } 
 }

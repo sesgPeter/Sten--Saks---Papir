@@ -36,6 +36,7 @@ class Button{
   }
   void click(){
    image(scissors,-250,50);
+   p1=2;
   }
 }
 
@@ -76,6 +77,7 @@ class Papir{
   }
   void click(){
    image(paper,50,50);
+   p1=3;
   }
 }
 
@@ -118,6 +120,7 @@ class Sten{
   }
   void click(){
    image(stone,50,50);
+   p1=1;
    
   }
 }
