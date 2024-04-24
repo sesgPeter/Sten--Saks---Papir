@@ -1,4 +1,6 @@
-float p1,p2,start,speed;
+int yHand, jumps, p1, p2, start, speed, preHight;
+
+float frame = 0;
 
 Button myButton;
 Papir myPapir;
@@ -8,7 +10,7 @@ saksp2 mysaksp2;
 papirp2 mypapirp2;
 start mystart;
 
-PImage stone, paper, scissors; 
+PImage stone, paper, scissors, hand; 
 
 void setup() {
   size(600, 600);
@@ -26,10 +28,13 @@ void setup() {
   paper = loadImage("Paper.png");
   stone = loadImage("Stone.png");
   scissors = loadImage ("Scissors.png");
+  hand = loadImage ("Hand.png");
   
   textSize(100);
   noStroke();
   
+  yHand = -250;
+  jumps = 0;
 
 }
 
@@ -47,9 +52,28 @@ void draw () {
   
   
   if(start==1 && p1==1 && p2==1){
-    image(stone,-250,50);
+    if(jumps < 4){
+     
+      
+      image(hand, -650, yHand);
+     yHand = (int)lerp(-240, -310, ((float)sin(frame)*30)/200);
+     
+     frame += 0.2;
+    }
+    
+    if (preHight < (int)lerp(-240, -310, ((float)sin(frame)*30)/200)){
+     jumps++; 
+    }
+    
+    preHight = (int)lerp(-240, -310, ((float)sin(frame)*30)/200);
+    /*
+    if(jumps >= 4){
+      image(stone,-250,50);
     image(stone,100,50);
+    textSize(100);
      text("tie", width/2,height-100);
+    }
+    */
   }
   
   if(start==1 && p1==2 && p2==1){
