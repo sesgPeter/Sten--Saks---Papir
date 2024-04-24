@@ -1,4 +1,4 @@
-float p1,p2,start;
+float p1,p2,start,speed;
 
 Button myButton;
 Papir myPapir;
@@ -13,13 +13,13 @@ PImage stone, paper, scissors;
 void setup() {
   size(600, 600);
   background(100);
-  myButton = new Button((width/9)*2-15, 550, 30, 25);
-  myPapir = new Papir((width/9)*3-15, 550, 30, 25);
-  mySten = new Sten((width/9)*1-15, 550, 30, 25);
+  myButton = new Button((width/9)*2-15+speed, 550, 30, 25);
+  myPapir = new Papir((width/9)*3-15+speed, 550, 30, 25);
+  mySten = new Sten((width/9)*1-15+speed, 550, 30, 25);
   
-  mysaksp2 = new saksp2((width/9)*7-15, 550, 30, 25);
-  mypapirp2 = new papirp2((width/9)*8-15, 550, 30, 25);
-  mystenp2 = new stenp2((width/9)*6-15, 550, 30, 25);
+  mysaksp2 = new saksp2((width/9)*7-15-speed, 550, 30, 25);
+  mypapirp2 = new papirp2((width/9)*8-15-speed, 550, 30, 25);
+  mystenp2 = new stenp2((width/9)*6-15-speed, 550, 30, 25);
   mystart = new start(width/2-25,height/2,70,25);
  
  
@@ -34,6 +34,7 @@ void setup() {
 }
 
 void draw () {
+  background(155);
   myButton.render();
   myPapir.render();
   mySten.render();
@@ -91,6 +92,7 @@ void draw () {
     image(scissors,-250,50);
     image(paper,100,50);
       text("player 1 Wins", width/3,height-100);
+      speed=speed+1;
   }
   
   if(start==1 && p1==3 && p2==3){
@@ -131,4 +133,12 @@ void mousePressed() {
    if (mystart.click(mouseX, mouseY)) {
       mystart.click();
    }
+}
+
+void keyPressed(){
+ if(key==ENTER){
+  p1=0;
+  p2=0;
+  start=0;
+ }
 }
