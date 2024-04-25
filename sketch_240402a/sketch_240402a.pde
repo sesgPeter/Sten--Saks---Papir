@@ -53,8 +53,6 @@ void draw () {
   
   if(start==1 && p1==1 && p2==1){
     if(jumps < 35){
-     
-      
       image(hand, -650, yHand);
      yHand = (int)lerp(-240, -310, ((float)sin(frame)*30)/200);
      
@@ -77,52 +75,192 @@ void draw () {
   }
   
   if(start==1 && p1==2 && p2==1){
-    image(scissors,-250,50);
+    
+    if(jumps < 35){
+     
+      
+      image(hand, -650, yHand);
+     yHand = (int)lerp(-240, -310, ((float)sin(frame)*30)/200);
+     
+     frame += 0.2;
+    }
+    
+    if (preHight < (int)lerp(-240, -310, ((float)sin(frame)*30)/200)){
+     jumps++; 
+    }
+    
+    preHight = (int)lerp(-240, -310, ((float)sin(frame)*30)/200);
+    
+    if(jumps >= 35){
+      image(scissors,-250,50);
     image(stone,100,50);
+    textSize(100);
      text("player 2 Wins", width/3,height-100);
+    }
+    
+    
   }
   
   if(start==1 && p1==3 && p2==1){
-    image(paper,-250,50);
+    if(jumps < 35){
+      image(hand, -650, yHand);
+     yHand = (int)lerp(-240, -310, ((float)sin(frame)*30)/200);
+     
+     frame += 0.2;
+    }
+    
+    if (preHight < (int)lerp(-240, -310, ((float)sin(frame)*30)/200)){
+     jumps++; 
+    }
+    
+    preHight = (int)lerp(-240, -310, ((float)sin(frame)*30)/200);
+    
+    if(jumps >= 35){
+      image(paper,-250,50);
     image(stone,100,50);
+    textSize(100);
       text("player 1 Wins", width/3,height-100);
+    }
+    
   }
   
   if(start==1 && p1==1 && p2==2){
-    image(stone,-250,50);
+    if(jumps < 35){
+      image(hand, -650, yHand);
+     yHand = (int)lerp(-240, -310, ((float)sin(frame)*30)/200);
+     
+     frame += 0.2;
+    }
+    
+    if (preHight < (int)lerp(-240, -310, ((float)sin(frame)*30)/200)){
+     jumps++; 
+    }
+    
+    preHight = (int)lerp(-240, -310, ((float)sin(frame)*30)/200);
+    
+    if(jumps >= 35){
+      image(stone,-250,50);
     image(scissors,100,50);
+    textSize(100);
       text("player 1 Wins", width/3,height-100);
+    }
+    
   }
   
   if(start==1 && p1==2 && p2==2){
-    image(scissors,-250,50);
+    if(jumps < 35){
+      image(hand, -650, yHand);
+     yHand = (int)lerp(-240, -310, ((float)sin(frame)*30)/200);
+     
+     frame += 0.2;
+    }
+    
+    if (preHight < (int)lerp(-240, -310, ((float)sin(frame)*30)/200)){
+     jumps++; 
+    }
+    
+    preHight = (int)lerp(-240, -310, ((float)sin(frame)*30)/200);
+    
+    if(jumps >= 35){
+      image(scissors,-250,50);
     image(scissors,100,50);
+    textSize(100);
      text("tie", width/3,height-100);
+    }
+    
   }
   
   if(start==1 && p1==3 && p2==2){
-    image(paper,-250,50);
+    if(jumps < 35){
+      image(hand, -650, yHand);
+     yHand = (int)lerp(-240, -310, ((float)sin(frame)*30)/200);
+     
+     frame += 0.2;
+    }
+    
+    if (preHight < (int)lerp(-240, -310, ((float)sin(frame)*30)/200)){
+     jumps++; 
+    }
+    
+    preHight = (int)lerp(-240, -310, ((float)sin(frame)*30)/200);
+    
+    if(jumps >= 35){
+      image(paper,-250,50);
     image(scissors,100,50);
+    textSize(100);
       text("player 2 Wins", width/3,height-100);
+    }
+    
   }
   
   if(start==1 && p1==1 && p2==3){
-    image(stone,-250,50);
+    if(jumps < 35){
+      image(hand, -650, yHand);
+     yHand = (int)lerp(-240, -310, ((float)sin(frame)*30)/200);
+     
+     frame += 0.2;
+    }
+    
+    if (preHight < (int)lerp(-240, -310, ((float)sin(frame)*30)/200)){
+     jumps++; 
+    }
+    
+    preHight = (int)lerp(-240, -310, ((float)sin(frame)*30)/200);
+    
+    if(jumps >= 35){
+      image(stone,-250,50);
     image(paper,100,50);
+    textSize(100);
       text("player 2 Wins", width/3,height-100);
+    }
+    
   }
   
   if(start==1 && p1==2 && p2==3){
-    image(scissors,-250,50);
+    if(jumps < 35){
+      image(hand, -650, yHand);
+     yHand = (int)lerp(-240, -310, ((float)sin(frame)*30)/200);
+     
+     frame += 0.2;
+    }
+    
+    if (preHight < (int)lerp(-240, -310, ((float)sin(frame)*30)/200)){
+     jumps++; 
+    }
+    
+    preHight = (int)lerp(-240, -310, ((float)sin(frame)*30)/200);
+    
+    if(jumps >= 35){
+      image(scissors,-250,50);
     image(paper,100,50);
+    textSize(100);
       text("player 1 Wins", width/3,height-100);
-      speed=speed+1;
+    }
+    
+      
   }
   
   if(start==1 && p1==3 && p2==3){
-    image(paper,-250,50);
+    if(jumps < 35){
+      image(hand, -650, yHand);
+     yHand = (int)lerp(-240, -310, ((float)sin(frame)*30)/200);
+     
+     frame += 0.2;
+    }
+    
+    if (preHight < (int)lerp(-240, -310, ((float)sin(frame)*30)/200)){
+     jumps++; 
+    }
+    
+    preHight = (int)lerp(-240, -310, ((float)sin(frame)*30)/200);
+    
+    if(jumps >= 35){
+      image(paper,-250,50);
     image(paper,100,50);
+    textSize(100);
     text("tie", width/3,height-100);
+    }
+    
   }
   
   
