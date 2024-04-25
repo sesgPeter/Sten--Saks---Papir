@@ -52,7 +52,7 @@ void draw () {
   
   
   if(start==1 && p1==1 && p2==1){
-    if(jumps < 4){
+    if(jumps < 35){
      
       
       image(hand, -650, yHand);
@@ -66,14 +66,14 @@ void draw () {
     }
     
     preHight = (int)lerp(-240, -310, ((float)sin(frame)*30)/200);
-    /*
-    if(jumps >= 4){
+    
+    if(jumps >= 35){
       image(stone,-250,50);
     image(stone,100,50);
     textSize(100);
      text("tie", width/2,height-100);
     }
-    */
+    
   }
   
   if(start==1 && p1==2 && p2==1){
