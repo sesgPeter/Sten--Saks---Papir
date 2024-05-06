@@ -1,5 +1,5 @@
-int yHand, jumps, p1, p2, start, speed, preHight;
-
+int yHand, jumps, p1, p2, start, speed, preHight, moveP1, moveP2;
+float vx;
 float frame = 0;
 
 Button myButton;
@@ -25,6 +25,10 @@ void setup() {
   mystart = new start(width/2-25,height/2,70,25);
  
  
+   moveP1 = -250;
+    
+   moveP2 = 100;
+ 
   paper = loadImage("Paper.png");
   stone = loadImage("Stone.png");
   scissors = loadImage ("Scissors.png");
@@ -35,6 +39,7 @@ void setup() {
   
   yHand = -250;
   jumps = 0;
+  vx = 1;
 
 }
 
@@ -66,10 +71,14 @@ void draw () {
     preHight = (int)lerp(-240, -310, ((float)sin(frame)*30)/200);
     
     if(jumps >= 35){
-      image(stone,-250,50);
-    image(stone,100,50);
+    
+    image(stone,moveP1,50);
+    image(stone,moveP2,50);
     textSize(100);
-     text("tie", width/2,height-100);
+     text("tie", width/2-50,height-100);
+     
+     moveP1 += vx;
+    moveP2 -= vx;
     }
     
   }
