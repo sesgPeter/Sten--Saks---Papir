@@ -25,9 +25,9 @@ void setup() {
   mystart = new start(width/2-25,height/2,70,25);
  
  
-   moveP1 = -250;
+   moveP1 = width/2-250;
     
-   moveP2 = 100;
+   moveP2 = width/2+50;
  
   paper = loadImage("Paper.png");
   stone = loadImage("Stone.png");
@@ -72,12 +72,16 @@ void draw () {
     
     if(jumps >= 35){
     
-    image(stone,moveP1,50);
-    image(stone,moveP2,50);
+    image(stone,moveP1,100);
+    image(stone,moveP2,100);
     textSize(100);
      text("tie", width/2-50,height-100);
      
-     moveP1 += vx;
+     if(moveP1 < 0 || moveP1 < width/2+50 ){
+       moveP1 += vx;
+       
+     }
+    
     moveP2 -= vx;
     }
     
