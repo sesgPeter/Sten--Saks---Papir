@@ -302,5 +302,6 @@ void keyPressed(){
   p1=0;
   p2=0;
   start=0;
+  jumps=0;
  }
 }
