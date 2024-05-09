@@ -4,6 +4,7 @@ class stenp2 {
   float x, y, w, h;
   color c;
   String s;
+  int t;
   //Construct
   stenp2(float _x, float _y, float _w, float _h){
     x = _x;
@@ -13,11 +14,13 @@ class stenp2 {
     
     c = color(0,0,150);
     s = "Sten";
+    t = 15;
   }
   //methods
   void render(){
     fill(c);
     rect(x, y, w, h);
+    textSize(t);
     text(s, x, y-h/2);
   }
   
@@ -51,6 +54,7 @@ class saksp2 {
   float x, y, w, h;
   color c;
   String s;
+  int t;
   //Construct
   saksp2(float _x, float _y, float _w, float _h){
     x = _x;
@@ -60,12 +64,14 @@ class saksp2 {
     
     c = color(0,0,150);
     s = "Saks";
+    t = 15;
     
   }
   //methods
   void render(){
     fill(c);
     rect(x, y, w, h);
+    textSize(t);
     text(s, x, y-h/2);
   }
   
@@ -101,6 +107,7 @@ class papirp2 {
   float x, y, w, h;
   color c;
   String s;
+  int t;
   //Construct
   papirp2(float _x, float _y, float _w, float _h){
     x = _x;
@@ -110,12 +117,14 @@ class papirp2 {
     
     c = color(0,0,150);
     s = "Papir";
+    t = 15;
     
   }
   //methods
   void render(){
     fill(c);
     rect(x, y, w, h);
+    textSize(t);
     text(s, x, y-h/2);
   }
   
