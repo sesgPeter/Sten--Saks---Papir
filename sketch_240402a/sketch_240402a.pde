@@ -10,7 +10,7 @@ saksp2 mysaksp2;
 papirp2 mypapirp2;
 start mystart;
 
-PImage stone, paper, scissors, hand, SaksSaks, PaperOnPaper, StenMder, RockDestroyScissors, ScissorsCutPaper, RockInPaper; 
+PImage stone, paper, scissors, hand, SaksSaks, PapirPapir, StenSten, StenSaks, PapirSaks, StenPapir, PapirSten; 
 
 void setup() {
   size(600, 600);
@@ -33,7 +33,14 @@ void setup() {
   stone = loadImage("Stone.png");
   scissors = loadImage ("Scissors.png");
   hand = loadImage ("Hand.png");
-  SaksSaks = loadImage("SaksSaks");
+  SaksSaks = loadImage("SaksSaks.png");
+  StenSten = loadImage("StenMøder.png");
+  PapirPapir=loadImage("PaperOnPaper.png");
+  StenSaks=loadImage("RockDestroyScissors.png");
+  StenPapir=loadImage("RockInPaper.png");
+  PapirSaks=loadImage("ScissorsCutPaper.png");
+  PapirSten =loadImage("RockInPaper.png");
+  
   textSize(100);
   noStroke();
   
@@ -75,7 +82,7 @@ void draw () {
     image(stone,moveP1,100);
     image(stone,moveP2,100);
     textSize(100);
-     text("tie", width/2-50,height-100);
+     
      
      
      
@@ -92,7 +99,11 @@ void draw () {
          }
     
     if(moveP2 == 200 && moveP2 == width/2-100){
-      image(SaksSaks,height/2,width/2);
+      background(100);
+      image(StenSten,40,50);
+      text("tie", width/2-50,height-50);
+      textSize(50);
+      text("press enter to reset", width/2-200,height-18);
     }
     
     
@@ -122,7 +133,7 @@ void draw () {
       image(scissors,moveP1,50);
     image(stone,moveP2,50);
     textSize(100);
-     text("player 2 Wins", width/3,height-100);
+    
      
       if(moveP1 < 0 || moveP1 < width/2-100){
        moveP1 += vx;
@@ -135,6 +146,15 @@ void draw () {
 
          moveP2 -= vx;
          }
+         
+         if(moveP2 == 200 && moveP2 == width/2-100){
+      background(100);
+      image(StenSten,40,50);
+      text("player 2 Wins", width/2-250,height-50);
+      textSize(50);
+      text("press enter to reset", width/2-200,height-18);
+    }
+    
     }
     
     
@@ -171,6 +191,14 @@ void draw () {
 
          moveP2 -= vx;
          }
+         
+         if(moveP2 == 200 && moveP2 == width/2-100){
+      background(100);
+      image(StenPapir,40,50);
+      text("player 1 Wins", width/2-250,height-50);
+      textSize(50);
+      text("press enter to reset", width/2-200,height-18);
+         }
     }
     
   }
@@ -193,7 +221,7 @@ void draw () {
       image(stone,moveP1,50);
     image(scissors,moveP2,50);
     textSize(100);
-      text("player 1 Wins", width/3,height-100);
+     
       
        if(moveP1 < 0 || moveP1 < width/2-100){
        moveP1 += vx;
@@ -205,6 +233,14 @@ void draw () {
      if(moveP2 > 0+200 || moveP2 > width){
 
          moveP2 -= vx;
+         }
+         
+         if(moveP2 == 200 && moveP2 == width/2-100){
+      background(100);
+      image(StenSaks,40,50);
+      text("player 1 Wins", width/2-250,height-50);
+      textSize(50);
+      text("press enter to reset", width/2-200,height-18);
          }
     }
     
@@ -228,7 +264,7 @@ void draw () {
       image(scissors,moveP1,50);
     image(scissors,moveP2,50);
     textSize(100);
-     text("tie", width/3,height-100);
+    
      
       if(moveP1 < 0 || moveP1 < width/2-100){
        moveP1 += vx;
@@ -240,6 +276,14 @@ void draw () {
      if(moveP2 > 0+200 || moveP2 > width){
 
          moveP2 -= vx;
+         }
+         
+         if(moveP2 == 200 && moveP2 == width/2-100){
+      background(100);
+      image(SaksSaks,40,50);
+      text("tie", width/2-50,height-50);
+      textSize(50);
+      text("press enter to reset", width/2-200,height-18);
          }
     }
     
@@ -263,7 +307,7 @@ void draw () {
       image(paper,moveP1,50);
     image(scissors,moveP2,50);
     textSize(100);
-      text("player 2 Wins", width/3,height-100);
+     
       
        if(moveP1 < 0 || moveP1 < width/2-100){
        moveP1 += vx;
@@ -275,6 +319,14 @@ void draw () {
      if(moveP2 > 0+200 || moveP2 > width){
 
          moveP2 -= vx;
+         }
+         
+         if(moveP2 == 200 && moveP2 == width/2-100){
+      background(100);
+      image(PapirSaks,40,50);
+      text("player 2 Wins", width/2-250,height-50);
+      textSize(50);
+      text("press enter to reset", width/2-200,height-18);
          }
     }
     
@@ -311,6 +363,13 @@ void draw () {
 
          moveP2 -= vx;
          }
+         if(moveP2 == 200 && moveP2 == width/2-100){
+      background(100);
+      image(StenSten,40,50);
+      text("player 2 Wins", width/2-250,height-50);
+      textSize(50);
+      text("press enter to reset", width/2-200,height-18);
+         }
     }
     
   }
@@ -345,6 +404,14 @@ void draw () {
      if(moveP2 > 0+200 || moveP2 > width){
 
          moveP2 -= vx;
+         }
+         
+         if(moveP2 == 200 && moveP2 == width/2-100){
+      background(100);
+      image(StenSten,40,50);
+      text("player 1 Wins", width/2-250,height-50);
+      textSize(50);
+      text("press enter to reset", width/2-200,height-18);
          }
     }
     
@@ -381,6 +448,14 @@ void draw () {
      if(moveP2 > 0+200 || moveP2 > width){
 
          moveP2 -= vx;
+         }
+         
+         if(moveP2 == 200 && moveP2 == width/2-100){
+      background(100);
+      image(PapirPapir,40,50);
+      text("tie", width/2-50,height-50);
+      textSize(50);
+      text("press enter to reset", width/2-200,height-18);
          }
     }
     
@@ -426,5 +501,7 @@ void keyPressed(){
   p2=0;
   start=0;
   jumps=0;
+  moveP1=width/2-250;
+  moveP2=width/2+50;
  }
 }
