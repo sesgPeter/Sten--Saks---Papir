@@ -1,4 +1,4 @@
-int yHand, jumps, p1, p2, start, speed, preHight, moveP1, moveP2;
+int yHand, jumps, p1, p2, start, preHight, moveP1, moveP2;
 float vx;
 float frame = 0;
 
@@ -10,18 +10,18 @@ saksp2 mysaksp2;
 papirp2 mypapirp2;
 start mystart;
 
-PImage stone, paper, scissors, hand; 
+PImage stone, paper, scissors, hand, SaksSaks, PaperOnPaper, StenMder, RockDestroyScissors, ScissorsCutPaper, RockInPaper; 
 
 void setup() {
   size(600, 600);
   background(100);
-  myButton = new Button((width/9)*2-15+speed, 550, 30, 25);
-  myPapir = new Papir((width/9)*3-15+speed, 550, 30, 25);
-  mySten = new Sten((width/9)*1-15+speed, 550, 30, 25);
+  myButton = new Button((width/9)*2-15, 550, 30, 25);
+  myPapir = new Papir((width/9)*3-15, 550, 30, 25);
+  mySten = new Sten((width/9)*1-15, 550, 30, 25);
   
-  mysaksp2 = new saksp2((width/9)*7-15-speed, 550, 30, 25);
-  mypapirp2 = new papirp2((width/9)*8-15-speed, 550, 30, 25);
-  mystenp2 = new stenp2((width/9)*6-15-speed, 550, 30, 25);
+  mysaksp2 = new saksp2((width/9)*7-15, 550, 30, 25);
+  mypapirp2 = new papirp2((width/9)*8-15, 550, 30, 25);
+  mystenp2 = new stenp2((width/9)*6-15, 550, 30, 25);
   mystart = new start(width/2-25,height/2,70,25);
  
  
@@ -33,7 +33,7 @@ void setup() {
   stone = loadImage("Stone.png");
   scissors = loadImage ("Scissors.png");
   hand = loadImage ("Hand.png");
-  
+  SaksSaks = loadImage("SaksSaks");
   textSize(100);
   noStroke();
   
@@ -77,12 +77,26 @@ void draw () {
     textSize(100);
      text("tie", width/2-50,height-100);
      
-     if(moveP1 < 0 || moveP1 < width/2+50 ){
+     
+     
+     if(moveP1 < 0 || moveP1 < width/2-100){
        moveP1 += vx;
        
+        
+       
      }
+     
+     if(moveP2 > 0+200 || moveP2 > width){
+
+         moveP2 -= vx;
+         }
     
-    moveP2 -= vx;
+    if(moveP2 == 200 && moveP2 == width/2-100){
+      image(SaksSaks,height/2,width/2);
+    }
+    
+    
+    
     }
     
   }
@@ -105,10 +119,22 @@ void draw () {
     preHight = (int)lerp(-240, -310, ((float)sin(frame)*30)/200);
     
     if(jumps >= 35){
-      image(scissors,-250,50);
-    image(stone,100,50);
+      image(scissors,moveP1,50);
+    image(stone,moveP2,50);
     textSize(100);
      text("player 2 Wins", width/3,height-100);
+     
+      if(moveP1 < 0 || moveP1 < width/2-100){
+       moveP1 += vx;
+       
+        
+       
+     }
+     
+     if(moveP2 > 0+200 || moveP2 > width){
+
+         moveP2 -= vx;
+         }
     }
     
     
@@ -129,10 +155,22 @@ void draw () {
     preHight = (int)lerp(-240, -310, ((float)sin(frame)*30)/200);
     
     if(jumps >= 35){
-      image(paper,-250,50);
-    image(stone,100,50);
+      image(paper,moveP1,50);
+    image(stone,moveP2,50);
     textSize(100);
       text("player 1 Wins", width/3,height-100);
+      
+       if(moveP1 < 0 || moveP1 < width/2-100){
+       moveP1 += vx;
+       
+        
+       
+     }
+     
+     if(moveP2 > 0+200 || moveP2 > width){
+
+         moveP2 -= vx;
+         }
     }
     
   }
@@ -152,10 +190,22 @@ void draw () {
     preHight = (int)lerp(-240, -310, ((float)sin(frame)*30)/200);
     
     if(jumps >= 35){
-      image(stone,-250,50);
-    image(scissors,100,50);
+      image(stone,moveP1,50);
+    image(scissors,moveP2,50);
     textSize(100);
       text("player 1 Wins", width/3,height-100);
+      
+       if(moveP1 < 0 || moveP1 < width/2-100){
+       moveP1 += vx;
+       
+        
+       
+     }
+     
+     if(moveP2 > 0+200 || moveP2 > width){
+
+         moveP2 -= vx;
+         }
     }
     
   }
@@ -175,10 +225,22 @@ void draw () {
     preHight = (int)lerp(-240, -310, ((float)sin(frame)*30)/200);
     
     if(jumps >= 35){
-      image(scissors,-250,50);
-    image(scissors,100,50);
+      image(scissors,moveP1,50);
+    image(scissors,moveP2,50);
     textSize(100);
      text("tie", width/3,height-100);
+     
+      if(moveP1 < 0 || moveP1 < width/2-100){
+       moveP1 += vx;
+       
+        
+       
+     }
+     
+     if(moveP2 > 0+200 || moveP2 > width){
+
+         moveP2 -= vx;
+         }
     }
     
   }
@@ -198,10 +260,22 @@ void draw () {
     preHight = (int)lerp(-240, -310, ((float)sin(frame)*30)/200);
     
     if(jumps >= 35){
-      image(paper,-250,50);
-    image(scissors,100,50);
+      image(paper,moveP1,50);
+    image(scissors,moveP2,50);
     textSize(100);
       text("player 2 Wins", width/3,height-100);
+      
+       if(moveP1 < 0 || moveP1 < width/2-100){
+       moveP1 += vx;
+       
+        
+       
+     }
+     
+     if(moveP2 > 0+200 || moveP2 > width){
+
+         moveP2 -= vx;
+         }
     }
     
   }
@@ -221,10 +295,22 @@ void draw () {
     preHight = (int)lerp(-240, -310, ((float)sin(frame)*30)/200);
     
     if(jumps >= 35){
-      image(stone,-250,50);
-    image(paper,100,50);
+      image(stone,moveP1,50);
+    image(paper,moveP2,50);
     textSize(100);
       text("player 2 Wins", width/3,height-100);
+      
+       if(moveP1 < 0 || moveP1 < width/2-100){
+       moveP1 += vx;
+       
+        
+       
+     }
+     
+     if(moveP2 > 0+200 || moveP2 > width){
+
+         moveP2 -= vx;
+         }
     }
     
   }
@@ -244,10 +330,22 @@ void draw () {
     preHight = (int)lerp(-240, -310, ((float)sin(frame)*30)/200);
     
     if(jumps >= 35){
-      image(scissors,-250,50);
-    image(paper,100,50);
+      image(scissors,moveP1,50);
+    image(paper,moveP2,50);
     textSize(100);
       text("player 1 Wins", width/3,height-100);
+      
+       if(moveP1 < 0 || moveP1 < width/2-100){
+       moveP1 += vx;
+       
+        
+       
+     }
+     
+     if(moveP2 > 0+200 || moveP2 > width){
+
+         moveP2 -= vx;
+         }
     }
     
       
@@ -268,10 +366,22 @@ void draw () {
     preHight = (int)lerp(-240, -310, ((float)sin(frame)*30)/200);
     
     if(jumps >= 35){
-      image(paper,-250,50);
-    image(paper,100,50);
+      image(paper,moveP1,50);
+    image(paper,moveP2,50);
     textSize(100);
     text("tie", width/3,height-100);
+    
+     if(moveP1 < 0 || moveP1 < width/2-100){
+       moveP1 += vx;
+       
+        
+       
+     }
+     
+     if(moveP2 > 0+200 || moveP2 > width){
+
+         moveP2 -= vx;
+         }
     }
     
   }
