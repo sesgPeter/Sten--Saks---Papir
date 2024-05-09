@@ -1,7 +1,9 @@
+//saks
 class Button{
 //Attr
   float x, y, w, h;
   color c;
+  String s;
   //Construct
   Button(float _x, float _y, float _w, float _h){
     x = _x;
@@ -10,12 +12,14 @@ class Button{
     h = _h;
     
     c = color(0,0,150);
+    s = "Saks";
     
   }
   //methods
   void render(){
     fill(c);
     rect(x, y, w, h);
+    text(s, x, y-h/2);
   }
   
  
@@ -41,10 +45,13 @@ class Button{
   }
 }
 
+
+//papir
 class Papir{
 //Attr
   float xp, yp, wp, hp;
   color c;
+  String sp;
   //Construct
   Papir(float _xp, float _yp, float _wp, float _hp){
     xp = _xp;
@@ -53,12 +60,14 @@ class Papir{
     hp = _hp;
     
     c = color(0,0,150);
+    sp = "Papir";
     
   }
   //methods
   void render(){
     fill(c);
     rect(xp, yp, wp, hp);
+    text(sp, xp, yp-hp/2);
   }
   
  
@@ -83,11 +92,12 @@ class Papir{
   }
 }
 
-
+//sten
 class Sten{
 //Attr
   float xr, yr, wr, hr;
   color c;
+  String sr;
   //Construct
     Sten(float _xr, float _yr, float _wr, float _hr){
     xr = _xr;
@@ -96,12 +106,14 @@ class Sten{
     hr = _hr;
     
     c = color(0,0,150);
+    sr = "Sten";
     
   }
   //methods
   void render(){
     fill(c);
     rect(xr, yr, wr, hr);
+    text(sr, xr, yr-hr/2);
   }
   
   

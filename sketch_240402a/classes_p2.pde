@@ -3,6 +3,7 @@ class stenp2 {
    //Attr
   float x, y, w, h;
   color c;
+  String s;
   //Construct
   stenp2(float _x, float _y, float _w, float _h){
     x = _x;
@@ -11,12 +12,13 @@ class stenp2 {
     h = _h;
     
     c = color(0,0,150);
-    
+    s = "Sten";
   }
   //methods
   void render(){
     fill(c);
     rect(x, y, w, h);
+    text(s, x, y-h/2);
   }
   
     
@@ -44,13 +46,11 @@ void click(){
 
 
 
-
-
-
 class saksp2 {
    //Attr
   float x, y, w, h;
   color c;
+  String s;
   //Construct
   saksp2(float _x, float _y, float _w, float _h){
     x = _x;
@@ -59,12 +59,14 @@ class saksp2 {
     h = _h;
     
     c = color(0,0,150);
+    s = "Saks";
     
   }
   //methods
   void render(){
     fill(c);
     rect(x, y, w, h);
+    text(s, x, y-h/2);
   }
   
     
@@ -98,6 +100,7 @@ class papirp2 {
    //Attr
   float x, y, w, h;
   color c;
+  String s;
   //Construct
   papirp2(float _x, float _y, float _w, float _h){
     x = _x;
@@ -106,12 +109,14 @@ class papirp2 {
     h = _h;
     
     c = color(0,0,150);
+    s = "Papir";
     
   }
   //methods
   void render(){
     fill(c);
     rect(x, y, w, h);
+    text(s, x, y-h/2);
   }
   
     
