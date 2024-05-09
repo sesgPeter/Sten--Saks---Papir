@@ -280,7 +280,7 @@ void draw () {
          
          if(moveP2 == 200 && moveP2 == width/2-100){
       background(100);
-      image(SaksSaks,40,50);
+      image(SaksSaks,80,0);
       text("tie", width/2-50,height-50);
       textSize(50);
       text("press enter to reset", width/2-200,height-18);
@@ -323,8 +323,8 @@ void draw () {
          
          if(moveP2 == 200 && moveP2 == width/2-100){
       background(100);
-      image(PapirSaks,40,50);
-      text("player 2 Wins", width/2-250,height-50);
+      image(PapirSaks,80,50);
+      text("player 2 Wins", width/2-250,height-70);
       textSize(50);
       text("press enter to reset", width/2-200,height-18);
          }
@@ -350,7 +350,7 @@ void draw () {
       image(stone,moveP1,50);
     image(paper,moveP2,50);
     textSize(100);
-      text("player 2 Wins", width/3,height-100);
+     
       
        if(moveP1 < 0 || moveP1 < width/2-100){
        moveP1 += vx;
@@ -365,8 +365,8 @@ void draw () {
          }
          if(moveP2 == 200 && moveP2 == width/2-100){
       background(100);
-      image(StenSten,40,50);
-      text("player 2 Wins", width/2-250,height-50);
+      image(StenPapir,190,100);
+      text("player 2 Wins", width/2-270,height-70);
       textSize(50);
       text("press enter to reset", width/2-200,height-18);
          }
@@ -392,8 +392,7 @@ void draw () {
       image(scissors,moveP1,50);
     image(paper,moveP2,50);
     textSize(100);
-      text("player 1 Wins", width/3,height-100);
-      
+     
        if(moveP1 < 0 || moveP1 < width/2-100){
        moveP1 += vx;
        
@@ -408,8 +407,8 @@ void draw () {
          
          if(moveP2 == 200 && moveP2 == width/2-100){
       background(100);
-      image(StenSten,40,50);
-      text("player 1 Wins", width/2-250,height-50);
+      image(PapirSaks,100,50);
+      text("player 1 Wins", width/2-250,height-70);
       textSize(50);
       text("press enter to reset", width/2-200,height-18);
          }
@@ -436,7 +435,7 @@ void draw () {
       image(paper,moveP1,50);
     image(paper,moveP2,50);
     textSize(100);
-    text("tie", width/3,height-100);
+    
     
      if(moveP1 < 0 || moveP1 < width/2-100){
        moveP1 += vx;
@@ -452,7 +451,7 @@ void draw () {
          
          if(moveP2 == 200 && moveP2 == width/2-100){
       background(100);
-      image(PapirPapir,40,50);
+      image(PapirPapir,60,30);
       text("tie", width/2-50,height-50);
       textSize(50);
       text("press enter to reset", width/2-200,height-18);
