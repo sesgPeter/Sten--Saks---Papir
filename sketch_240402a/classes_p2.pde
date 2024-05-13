@@ -13,7 +13,7 @@ class stenp2 {
     h = _h;
     
     c = color(0,0,150);
-    s = "Sten";
+    s = "Rock";
     t = 15;
   }
   //methods
@@ -31,8 +31,8 @@ class stenp2 {
         return true;
     }
     }
-    if (true){
-     
+    if (true && p2 > 0){
+      c = color(255,0,0);
     }
     
     
@@ -63,7 +63,7 @@ class saksp2 {
     h = _h;
     
     c = color(0,0,150);
-    s = "Saks";
+    s = "Scissors";
     t = 15;
     
   }
@@ -72,18 +72,18 @@ class saksp2 {
     fill(c);
     rect(x, y, w, h);
     textSize(t);
-    text(s, x, y-h/2);
+    text(s, x-10, y-h/2);
   }
   
     
   boolean click(float mousex, float mousey){
     if (this.x < mousex && this.x + this.w > mousex){
-      if (this.y < mousey && this.y + this.h > mousey){
+      if (this.y < mousey && this.y+ this.h > mousey){
         return true;
     }
     }
-    if (true){
-      
+    if (true && p2>0){
+      c = color(255,0,0);
     }
     
     
@@ -116,7 +116,7 @@ class papirp2 {
     h = _h;
     
     c = color(0,0,150);
-    s = "Papir";
+    s = "Paper";
     t = 15;
     
   }
@@ -135,8 +135,8 @@ class papirp2 {
         return true;
     }
     }
-    if (true){
-     
+ if (true && p2>0){
+      c = color(255,0,0);
     }
     
     
