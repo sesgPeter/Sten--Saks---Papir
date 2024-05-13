@@ -13,7 +13,7 @@ class Button{
     h = _h;
     
     c = color(0,0,150);
-    s = "Saks";
+    s = "Scissors";
     t = 15;
     
   }
@@ -22,10 +22,9 @@ class Button{
     fill(c);
     rect(x, y, w, h);
     textSize(t);
-    text(s, x, y-h/2);
+    text(s, x-10, y-h/2);
     
   }
-  
  
   
   
@@ -35,8 +34,8 @@ class Button{
         return true;
     }
     }
-    if (true){
-      
+    if (true && p1>0){
+      c = color(255,0,0);
     }
     
     
@@ -46,8 +45,14 @@ class Button{
    //image(scissors,-250,50);
    p1=2;
    start=0;
-  }
+  
+   
+   }
+   
 }
+
+
+
 
 
 //papir
@@ -65,7 +70,7 @@ class Papir{
     hp = _hp;
     
     c = color(0,0,150);
-    sp = "Papir";
+    sp = "Paper";
     t = 15;
     
   }
@@ -85,9 +90,11 @@ class Papir{
         return true;
     }
     }
-    if (true){
-      
+ if (true && p1>0){
+      c = color(255,0,0);
     }
+      
+    
     
     
   return false;
@@ -114,7 +121,7 @@ class Sten{
     hr = _hr;
     
     c = color(0,0,150);
-    sr = "Sten";
+    sr = "Rock";
     t = 15;
     
   }
@@ -135,8 +142,8 @@ class Sten{
         return true;
     }
     }
-    if (true){
-      
+     if (true && p1>0){
+      c = color(255,0,0);
     }
     
     

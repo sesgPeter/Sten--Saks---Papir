@@ -15,12 +15,12 @@ PImage stone, paper, scissors, hand, SaksSaks, PapirPapir, StenSten, StenSaks, P
 void setup() {
   size(600, 600);
   background(100);
-  myButton = new Button((width/9)*2-15, 550, 30, 25);
-  myPapir = new Papir((width/9)*3-15, 550, 30, 25);
+  myButton = new Button((width/9)*3-15, 550, 30, 25);
+  myPapir = new Papir((width/9)*2-15, 550, 30, 25);
   mySten = new Sten((width/9)*1-15, 550, 30, 25);
   
-  mysaksp2 = new saksp2((width/9)*7-15, 550, 30, 25);
-  mypapirp2 = new papirp2((width/9)*8-15, 550, 30, 25);
+  mysaksp2 = new saksp2((width/9)*8-15, 550, 30, 25);
+  mypapirp2 = new papirp2((width/9)*7-15, 550, 30, 25);
   mystenp2 = new stenp2((width/9)*6-15, 550, 30, 25);
   mystart = new start(width/2-35,height/2,70,25);
  
@@ -48,6 +48,7 @@ void setup() {
   jumps = 0;
   vx = 1;
 
+
 }
 
 void draw () {
@@ -60,7 +61,9 @@ void draw () {
   mypapirp2.render();
   mystenp2.render();
   mystart.render();
-  
+  textSize(50);
+   text("Player 1",50,height-100);
+   text("Player 2",width-225,height-100);
   
   
   if(start==1 && p1==1 && p2==1){
