@@ -101,7 +101,7 @@ void draw () {
          moveP2 -= vx;
          }
     
-    if(moveP2 == 200 && moveP2 == width/2-100){
+    if(moveP1 == 200 && moveP2 == width/2-100){
       background(100);
       image(StenSten,40,50);
       text("tie", width/2-50,height-50);
@@ -150,7 +150,7 @@ void draw () {
          moveP2 -= vx;
          }
          
-         if(moveP2 == 200 && moveP2 == width/2-100){
+         if(moveP1 == 200 && moveP2 == width/2-100){
       background(100);
       image(StenSaks,40,50);
       text("player 2 Wins", width/2-2780,height-80);
@@ -195,7 +195,7 @@ void draw () {
          moveP2 -= vx;
          }
          
-         if(moveP2 == 200 && moveP2 == width/2-100){
+         if(moveP1 == 200 && moveP2 == width/2-100){
       background(100);
       image(StenPapir,width/2-90,50);
       text("player 1 Wins", width/2-280,height-80);
@@ -238,7 +238,7 @@ void draw () {
          moveP2 -= vx;
          }
          
-         if(moveP2 == 200 && moveP2 == width/2-100){
+         if(moveP1 == 200 && moveP2 == width/2-100){
       background(100);
       image(StenSaks,50,50);
       text("player 1 Wins", width/2-280,height-80);
@@ -281,7 +281,7 @@ void draw () {
          moveP2 -= vx;
          }
          
-         if(moveP2 == 200 && moveP2 == width/2-100){
+         if(moveP1 == 200 && moveP2 == width/2-100){
       background(100);
       image(SaksSaks,80,0);
       text("tie", width/2-50,height-50);
@@ -324,7 +324,7 @@ void draw () {
          moveP2 -= vx;
          }
          
-         if(moveP2 == 200 && moveP2 == width/2-100){
+         if(moveP1 == 200 && moveP2 == width/2-100){
       background(100);
       image(PapirSaks,80,50);
       text("player 2 Wins", width/2-250,height-70);
@@ -366,7 +366,7 @@ void draw () {
 
          moveP2 -= vx;
          }
-         if(moveP2 == 200 && moveP2 == width/2-100){
+         if(moveP1 == 200 && moveP2 == width/2-100){
       background(100);
       image(StenPapir,190,100);
       text("player 2 Wins", width/2-270,height-70);
@@ -452,7 +452,7 @@ void draw () {
          moveP2 -= vx;
          }
          
-         if(moveP2 == 200 && moveP2 == width/2-100){
+         if(moveP1 == 200 && moveP2 == width/2-100){
       background(100);
       image(PapirPapir,60,30);
       text("tie", width/2-50,height-50);
