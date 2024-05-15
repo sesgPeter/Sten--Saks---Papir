@@ -38,8 +38,7 @@ class stenp2 {
     
   return false;
   }
-void click(){
-   //image(stone,50,50);  
+void click(){ 
    p2=1;
    start=0;
 } 
@@ -90,7 +89,6 @@ class saksp2 {
   return false;
   }
 void click(){
-   //image(scissors,50,50);  
    p2=2;
    start=0;
 } 
@@ -143,7 +141,6 @@ class papirp2 {
   return false;
   }
 void click(){
-   //image(paper,-300,50);  
    p2=3;
    start=0;
 } 
